@@ -88,6 +88,12 @@ function player_falling()
         var mtileX = (element[0] + sizeOfTileX) | 0;
         var mtileY = (element[1] + sizeOfTileY) | 0;
 
+        if ((x < -(WIDTH / 2)))
+        {
+            player1.dead()
+            console.log('Player is dead')
+        }
+
         if ((x > tileX)
             && (x < mtileX)
             && (y > tileY) 
